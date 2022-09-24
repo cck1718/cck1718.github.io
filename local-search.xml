@@ -17,17 +17,17 @@
   
   
   <entry>
-    <title>先来点真实的</title>
-    <link href="/2022/09/20/%E5%85%88%E6%9D%A5%E7%82%B9%E7%9C%9F%E5%AE%9E%E7%9A%84/"/>
-    <url>/2022/09/20/%E5%85%88%E6%9D%A5%E7%82%B9%E7%9C%9F%E5%AE%9E%E7%9A%84/</url>
+    <title>集合</title>
+    <link href="/2022/09/20/%E9%9B%86%E5%90%88/"/>
+    <url>/2022/09/20/%E9%9B%86%E5%90%88/</url>
     
-    <content type="html"><![CDATA[<p>哥你真猛！！！</p>]]></content>
+    <content type="html"><![CDATA[<p>集合中不能存放基本数据类型，所以平时存放的都是一个个内存地址。如果编写代码时写了基本数据类型，比如List.add(100)也没有关系，因为有自动装箱机制。 集合有两类，分别是Collection和Map。Collection下有List和Set两个接口，List的实现类主要有ArrayList、 LinkedList、Vector，Set的实现类主要有HashSet和TreeSet。而Map的实现类主要有HashMap、HashTable、TreeMap。 List和Set的区别主要在与List下实现的集合是有序可重复的，而Map接口下实现的接口是无序不可重复的。</p><p>ArrayList</p><pre><code class="hljs">    ArrayList底层是数组，所以他的优点在于空间利用率高、可随机存取、方便遍历等，而他的缺点在于内存地址必须是一块连续的，所以不适合存放大量数据，同时它的增删效率较低，但如果增删操作是对于最后一个数据的话效率相对会提高很多。</code></pre><p>LinkedList</p><pre><code class="hljs">    LinkedList底层是由双向链表实现的，相对于数组来说，它的有点体现在可以随机扩容、增删效率相对较高，但双向链表缺点也很明显，由于没有下标，遍历需要从头到尾不能随机存取，而且空间利用率也相对较低。</code></pre><p>Vector</p><pre><code class="hljs">    本质上和ArrayList没有什么区别，主要在于它的方法都加了synchronized锁修饰来实现线程安全，所以相对而言效率会低一些。</code></pre><p>HashSet</p><pre><code class="hljs">    HashSet在创建时实际上是new了一个HashMap，所以它是无序不可重复的。</code></pre><p>TreeSet</p><pre><code class="hljs">    TreeSet在创建时实际上时new了一个TreeMap，所以他是有序不可重复的。</code></pre><p>HashMap</p><pre><code class="hljs">    HashMap底层时哈希表，解决了链表和数组的缺点，实现方式为数组+链表+红黑树。存放数据的方式为key，value，比如执行Hash.put(&quot;你好&quot;,&quot;我很好&quot;)，首先会通过hashCode方法计算出key的哈希地址，然后通过哈希地址将value存放在数组上，如果下次新增数据时哈希地址相同就会比较两个value的值，如果相同就覆盖原来的值，如果不相同就与先前的数据组成一个链表，当链表上的数据大于7时会转换成一颗红黑树。</code></pre><p>HashTable</p><pre><code class="hljs">    HashTable的特点在于每个方法上面都加上了synchronized修饰，保证了线程安全，但是效率相对较低。</code></pre><p>TreeMap</p><pre><code class="hljs">    TreeMap底层是二叉树，所以TreeMap中的数据是可以排序的。</code></pre><p>CopyOnWritArrayList和ConcurrentHashMap</p><pre><code class="hljs">    Vector和HashTable这两种集合保证线程安全的方式，会在使用时锁住整个对象，粒度太大，所以在并发情况下直接效率并不理想，这时候就提出了新的解决方案，CopyOnWritArrayList通过复制写入的方式，在写入数据时先复制一份，再将修改后的数据写入原来的数据，这种方式不需要加读锁，大大提高了运行效率，但如果数据量比较大的时候会造成一定的延迟。    ConcurrentHashMap相比于HashTable的锁住整个结构采用了分段锁的方式，加入了一个新的数组，将哈希表分割为若干个块，每次使用时只会锁住所使用的那个块，而在jdk1.8中对ConcurrentHashMap进行了优化，取消了这个分割数组，将每个锁直接赋给了原来的数组上，只有当两个线程访问到同一个哈希地址的时候才会触发锁，同时使用CAS机制，使得它的效率和HashMap接近。</code></pre><p>CAS</p><pre><code class="hljs">    当一个线程访问一个数据时，会先拿到一个预期的值和要修改的值，在拿到数据后会将数据跟预期值比较，如果相同才会将数据改为要修改的值，否则就会进入下一次循环。</code></pre>]]></content>
     
     
     
     <tags>
       
-      <tag>知识</tag>
+      <tag>java</tag>
       
     </tags>
     
