@@ -16,22 +16,22 @@
   <meta name="author" content="cck1718">
   <meta name="keywords" content="">
   
-    <meta name="description" content="哥你真猛！！！">
+    <meta name="description" content="重载和重写    重载相当于一种多义词。在同一个类中实现重载的话两个方法的方法名必须相同，参数列表必须不同(数据类型不同、参数多少 不同)。     重写与重载不同，它基于多态，是子类继承父类的方法后对其进行修改。重写必须保证子类中方法的方法名、参数列表、返回值 与父类中的方法相同，而且重写的方法不能抛出大于父类方法的异常，同时它的访问权限修饰符不能小于父类中的方法。  &#x3D;&#x3D;和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="先来点真实的">
-<meta property="og:url" content="http://example.com/2022/09/20/%E5%85%88%E6%9D%A5%E7%82%B9%E7%9C%9F%E5%AE%9E%E7%9A%84/index.html">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://example.com/2022/07/19/%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="哥你真猛！！！">
+<meta property="og:description" content="重载和重写    重载相当于一种多义词。在同一个类中实现重载的话两个方法的方法名必须相同，参数列表必须不同(数据类型不同、参数多少 不同)。     重写与重载不同，它基于多态，是子类继承父类的方法后对其进行修改。重写必须保证子类中方法的方法名、参数列表、返回值 与父类中的方法相同，而且重写的方法不能抛出大于父类方法的异常，同时它的访问权限修饰符不能小于父类中的方法。  &#x3D;&#x3D;和">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-20T11:51:27.000Z">
-<meta property="article:modified_time" content="2022-09-20T12:51:29.896Z">
+<meta property="article:published_time" content="2022-07-19T05:32:42.000Z">
+<meta property="article:modified_time" content="2022-09-25T06:36:40.464Z">
 <meta property="article:author" content="cck1718">
-<meta property="article:tag" content="知识">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>先来点真实的 - </title>
+  <title>java基础 - </title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="先来点真实的"></span>
+            <span id="subtitle" data-typed-text="java基础"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-20 19:51" pubdate>
-          2022年9月20日 晚上
+        <time datetime="2022-07-19 13:32" pubdate>
+          2022年7月19日 下午
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7 字
+          1.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -268,12 +268,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">先来点真实的</h1>
+            <h1 style="display: none">java基础</h1>
             
             
               <div class="markdown-body">
                 
-                <p>哥你真猛！！！</p>
+                <h2 id="重载和重写"><a href="#重载和重写" class="headerlink" title="重载和重写"></a>重载和重写</h2><pre><code class="hljs">    重载相当于一种多义词。在同一个类中实现重载的话两个方法的方法名必须相同，参数列表必须不同(数据类型不同、参数多少
+不同)。
+    重写与重载不同，它基于多态，是子类继承父类的方法后对其进行修改。重写必须保证子类中方法的方法名、参数列表、返回值
+与父类中的方法相同，而且重写的方法不能抛出大于父类方法的异常，同时它的访问权限修饰符不能小于父类中的方法。
+</code></pre>
+<h2 id="x3D-x3D-和equals"><a href="#x3D-x3D-和equals" class="headerlink" title="&#x3D;&#x3D;和equals"></a>&#x3D;&#x3D;和equals</h2><pre><code class="hljs">    ==比较的是两个变量所指向的值，对于两个基本数据类型来说，直接使用==进行比较没有问题，但如果是两个引用类型使用==
+比较的就是各自指向的内存地址。equals默认实现也是==，通常会重写equals方法用来比较两个引用数据类型的值，比如String
+类中的equals方法就重写了，首先比较两个对象的内存地址， 如果相同则返回true，如果不是则继续比较每个字符，相同的话则返
+回true。
+</code></pre>
+<h2 id="内存区-待完善"><a href="#内存区-待完善" class="headerlink" title="内存区(待完善)"></a>内存区(待完善)</h2><pre><code class="hljs">    jvm的公共内存大致分为堆、栈、方法区，堆中存放实例对象和数组，栈中存放基本数据类型和对对象的引用，方法区中存放方
+法信息(方法名、方法类型 等等)、类型信息(类、接口、注解等等的有效名)，同时方法区中还有一个常量池，存放不可变的常量。
+比如User user = new User（）;这行代码，User会保留在方法区，user会保留在栈中，new User()会保留在堆内存中，当代码
+运行时会通过方法区的信息获取到数据类型同时在堆内存中开辟出改对象的内存空间，最后将该对象的内存地址赋给栈中的变量。
+</code></pre>
+<h2 id="String的内存分配"><a href="#String的内存分配" class="headerlink" title="String的内存分配"></a>String的内存分配</h2><pre><code class="hljs">    String对象的底层实现是一个加了final修饰的char数组，所以String实际上是不可变的，而且String对象存储在常量池中。
+    String s1 = &quot;str&quot;;
+    String s2 = new String(&quot;str&quot;);
+    这两个方法创建对象的过程不一样，第一种创建字符串时，直接在常量池中创建数据然后将内存地址赋给了s1变量，而第二种
+方式是将常量池中的内存地址赋给堆内存中String对象，然后再把String对象的地址赋给s2。
+</code></pre>
+<h2 id="interface和abstract"><a href="#interface和abstract" class="headerlink" title="interface和abstract"></a>interface和abstract</h2><pre><code class="hljs">    抽象类中不能有变量，抽象类中的方法可以是抽象方法或者普通方法，抽象类中的抽象方法必须被继承的子类实现，抽象类不
+能用来创建对象，抽象类有构造方法且只能单继承。
+    接口中可以有方法和变量，但是它的变量全是被public static final修饰的，方法全被public abstract修饰，接口没有构
+造方法但是可以多实现。
+    抽像类一般用于定义一种模范，而接口一般用于定义一种功能。
+</code></pre>
+<h2 id="自动装箱和自动拆箱"><a href="#自动装箱和自动拆箱" class="headerlink" title="自动装箱和自动拆箱"></a>自动装箱和自动拆箱</h2><pre><code class="hljs">    每个基本数据类型都有各自对应的包装类，这些包装类创建出来的数据都是对象，而自动装箱就是再需要将基本数据类型转换
+为引用数据类型时，自动将其转换，反之则是自动拆箱，那么这么做的意义是什么呢？
+    众所周知集合中时不允许加入基本数据类型的，如果往集合中加入一个基本数据类型就需要将其转换为对象，而当我们需要对
+这个数据进行计算的时候又需要把他转换成基本数据类型，这时自动装箱和自动拆箱的意义就体现出来了。
+</code></pre>
 
                 
               </div>
@@ -286,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86/">#知识</a>
+        <a href="/tags/java/">#java</a>
       
     </div>
   
@@ -298,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>先来点真实的</div>
-      <div>http://example.com/2022/09/20/先来点真实的/</div>
+      <div>java基础</div>
+      <div>http://example.com/2022/07/19/基础/</div>
     </div>
     <div class="license-meta">
       
@@ -311,7 +342,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月20日</div>
+          <div>2022年7月19日</div>
         </div>
       
       
@@ -343,15 +374,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/20/hello-world/" title="Hello World">
+                      <a href="/2022/07/20/%E9%9B%86%E5%90%88/" title="集合">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
+                        <span class="hidden-mobile">集合</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/05/20/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

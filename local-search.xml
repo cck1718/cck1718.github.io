@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2022/09/20/hello-world/"/>
-    <url>/2022/09/20/hello-world/</url>
+    <title></title>
+    <link href="/2022/09/25/git/"/>
+    <url>/2022/09/25/git/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     
@@ -17,19 +17,161 @@
   
   
   <entry>
-    <title>先来点真实的</title>
-    <link href="/2022/09/20/%E5%85%88%E6%9D%A5%E7%82%B9%E7%9C%9F%E5%AE%9E%E7%9A%84/"/>
-    <url>/2022/09/20/%E5%85%88%E6%9D%A5%E7%82%B9%E7%9C%9F%E5%AE%9E%E7%9A%84/</url>
+    <title></title>
+    <link href="/2022/09/25/mysql/"/>
+    <url>/2022/09/25/mysql/</url>
     
-    <content type="html"><![CDATA[<p>哥你真猛！！！</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/io/"/>
+    <url>/2022/09/25/io/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <url>/2022/09/25/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/springBoot/"/>
+    <url>/2022/09/25/springBoot/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/mybatis/"/>
+    <url>/2022/09/25/mybatis/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/springMVC/"/>
+    <url>/2022/09/25/springMVC/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/25/spring/"/>
+    <url>/2022/09/25/spring/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SpringCloud</title>
+    <link href="/2022/09/20/springCloud/"/>
+    <url>/2022/09/20/springCloud/</url>
+    
+    <content type="html"><![CDATA[<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><pre><code class="hljs">将一个应用的各个组件分开部署到不同的服务器，各组件之间独立运行的同时又互相联系，这就是分布式的基本概念。</code></pre><h2 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h2><pre><code class="hljs">同一个业务模块部署在多台服务器上做相同的事，提高工作效率。</code></pre><h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2><pre><code class="hljs">将一个独立的项目按业务需求分割成一个个独立的小模块并独立部署在不同的服务器，他们之间即独立又可以相互调用这就是微服务的基本理念</code></pre><h1 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h1><pre><code class="hljs">    SpringCloud简单来说就是是一个微服务架构的构建工具集，它包含了构建微服务架构的各种工具，比如服务发现注册、配置中心、负载均衡等。</code></pre><h2 id="服务注册组件——consul"><a href="#服务注册组件——consul" class="headerlink" title="服务注册组件——consul"></a>服务注册组件——consul</h2><p>在微服务中，组件的声明需要注册在一个服务端中，服务端在注册组件后会生成一个注册表记录各组件的地址，当一个组件需要访问另一个组件的时候会先往服务端拉取对应组件的地址信息再去访问对应的组件。<br>服务端还会定期和各组件之间通讯，如果没有在规定时间内收到响应就会判断该组件失效然后消除它的地址信息并且发送给其他组件，这被称为组件的健康检查机制。</p><p>SpringCloud下的consul组件能够完成这些功能，而且使用consul不用自己写服务端，只需要编写客户端的代码，服务端已经有consul写好了，并提供图形页面</p><ul><li><p>启动consul服务器 打开cmd 输入：<code>consul agent -dev</code></p></li><li><p>引入依赖</p></li></ul><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--引入consul客户端依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-consul-discovery<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!--引入健康检查依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><ul><li>配置客户端配置</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8501</span>            <span class="hljs-comment">#客户端端口号</span><br><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">application:</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">CATEGORY</span>      <span class="hljs-comment">#客户端ID 必须唯一</span><br>  <span class="hljs-attr">cloud:</span><br>    <span class="hljs-attr">consul:</span><br>      <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span>   <span class="hljs-comment">#服务端地址</span><br>      <span class="hljs-attr">port:</span> <span class="hljs-number">8500</span><br></code></pre></td></tr></table></figure><ul><li>在启动类中加上@EnableDiscoveryClient注解开启客户端功能，声明这是一个客户端</li></ul><p>在consul中并没有eureka中的自我保护机制，当客户端网络出现波动后服务端可能会消除客户端的地址。</p><h2 id="客户端之间的通信"><a href="#客户端之间的通信" class="headerlink" title="客户端之间的通信"></a>客户端之间的通信</h2><p>客户端之间的通信通常有三种方式，直接使用RestTemplate、使用Ribbon+RestTemplate和使用OpenFeign伪http客户端</p><ul><li><p>RestTemplate</p><p>  在SpringCloud中使用的通信方式是http，因为http能支持各种语言，使用http通信能够实现不同客户端用不同语言实现，相比于RPC对硬件的要求也更低。</p></li></ul><p>但如果想要发送http请求就需要http的客户端，所以java实现了这个功能，就是RestTemplate。通过它可以实现客户端之间的通信，但是没有做任何的负载均衡</p><pre><code class="hljs">    在RestTemplate的getForObject()传入客户端地址和对应客户端方法的返回值类型就可以连接</code></pre><p>，所以单单使用RestATemplate的方式并不推荐，它只能充当一个通信工具。</p><ul><li><p>Ribbon</p><p>  Ribbon是一个客户端的负载均衡组件，提供了各种负载均衡策略，默认为轮询策略。使用Ribbon不需要引入依赖，在consul 中已经完成了引入。Ribbon提供了两个对象，只需要注入就能使用</p><pre><code class="hljs">  DiscoveryClient   通过DiscoveryClient的getInstances()方法中传入客户端ID可以获取到这个客户端的所有地址。    loadBalancerClient 往loadBalancerClient的choose方法中传入客户端的ID就可以获取到这个客户端的地址，如果这  个客户端部署在多个服务器上那它就会使用默认的负载均衡策略(轮询)。    @loadBalanced 在需要负载俊峰的发放上加上这个注解(比如RestTemplate的配置方法)就可以使其拥有Ribbon的负载均衡特  性，在使用RestTemplate发送请求的时候,URL只需要写 “http:// + 客服端ID + 方法地址&quot;即可</code></pre><p>  Ribbon会根据客户端ID往服务器中拉取对应客户端的地址然后在根据自身的负载均衡策略选择对应的地址访问，而Ribbon的负载均衡策略是根据IRule这个父接口提供的，有随机、根据响应时间加权、轮询等策略，默认是轮询策略</p></li><li><p>OpenFeign</p></li></ul><p>OpenFeign是一个伪http客户端，但他内部还是包装了RestTemplate同时它支持springMVC的注解，而且解决了Ribbon的问题。</p><p>引入依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--引入openfeign依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-openfeign<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><p>配置文件</p><p>···</p><p>开启入口</p><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-meta">@EnableFeignClients</span>         <span class="hljs-comment">//在入口类加上注解开启OpenFeign</span><br></code></pre></td></tr></table></figure><p>编写接口</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">&lt;!--编写对应客户端的接口--&gt;<br><span class="hljs-meta">@FeignClient(<span class="hljs-string">&quot;CLIENT&quot;</span>)</span>          <span class="hljs-comment">//声明对应客户端</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">client</span>&#123;<br>    <br>    <span class="hljs-meta">@GetMapping(<span class="hljs-string">&quot;/demo&quot;</span>)</span>        <span class="hljs-comment">//填写对应方法的请求地址</span><br>    String demo();              <span class="hljs-comment">//根据对应方法的返回值确定当前抽象方法的返回值类型</span><br>&#125;<br></code></pre></td></tr></table></figure><p>注入使用</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> <span class="hljs-title class_">Client</span> client;<br><br>···<br><span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params"></span>)&#123;<br>    client.<span class="hljs-title function_">demo</span>();                  <span class="hljs-comment">//直接调用接口中的方法就可以跟对应客户端发送球球并且接受返回数据</span><br>&#125;<br>···<br></code></pre></td></tr></table></figure><p>OpenFeign传参</p>]]></content>
     
     
     
     <tags>
       
-      <tag>知识</tag>
+      <tag>java</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>集合</title>
+    <link href="/2022/07/20/%E9%9B%86%E5%90%88/"/>
+    <url>/2022/07/20/%E9%9B%86%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<p>集合中不能存放基本数据类型，所以平时存放的都是一个个内存地址。如果编写代码时写了基本数据类型，比如List.add(100)也没有关系，因为有自动装箱机制。 集合有两类，分别是Collection和Map。Collection下有List和Set两个接口，List的实现类主要有ArrayList、 LinkedList、Vector，Set的实现类主要有HashSet和TreeSet。而Map的实现类主要有HashMap、HashTable、TreeMap。 List和Set的区别主要在与List下实现的集合是有序可重复的，而Map接口下实现的接口是无序不可重复的。</p><h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><pre><code class="hljs">    ArrayList底层是数组，所以他的优点在于空间利用率高、可随机存取、方便遍历等，而他的缺点在于内存地址必须是一块连续的，所以不适合存放大量数据，同时它的增删效率较低，但如果增删操作是对于最后一个数据的话效率相对会提高很多。</code></pre><h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><pre><code class="hljs">    LinkedList底层是由双向链表实现的，相对于数组来说，它的有点体现在可以随机扩容、增删效率相对较高，但双向链表缺点也很明显，由于没有下标，遍历需要从头到尾不能随机存取，而且空间利用率也相对较低。</code></pre><h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><pre><code class="hljs">    本质上和ArrayList没有什么区别，主要在于它的方法都加了synchronized锁修饰来实现线程安全，所以相对而言效率会低一些。</code></pre><h2 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h2><pre><code class="hljs">    HashSet在创建时实际上是new了一个HashMap，所以它是无序不可重复的。</code></pre><h2 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h2><pre><code class="hljs">    TreeSet在创建时实际上时new了一个TreeMap，所以他是有序不可重复的。</code></pre><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><pre><code class="hljs">    HashMap底层时哈希表，解决了链表和数组的缺点，实现方式为数组+链表+红黑树。存放数据的方式为key，value，比如执行Hash.put(&quot;你好&quot;,&quot;我很好&quot;)，首先会通过hashCode方法计算出key的哈希地址，然后通过哈希地址将value存放在数组上，如果下次新增数据时哈希地址相同就会比较两个value的值，如果相同就覆盖原来的值，如果不相同就与先前的数据组成一个链表，当链表上的数据大于7时会转换成一颗红黑树。</code></pre><h2 id="HashTable"><a href="#HashTable" class="headerlink" title="HashTable"></a>HashTable</h2><pre><code class="hljs">    HashTable的特点在于每个方法上面都加上了synchronized修饰，保证了线程安全，但是效率相对较低。</code></pre><h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><pre><code class="hljs">    TreeMap底层是二叉树，所以TreeMap中的数据是可以排序的。</code></pre><h2 id="CopyOnWritArrayList和ConcurrentHashMap"><a href="#CopyOnWritArrayList和ConcurrentHashMap" class="headerlink" title="CopyOnWritArrayList和ConcurrentHashMap"></a>CopyOnWritArrayList和ConcurrentHashMap</h2><pre><code class="hljs">    Vector和HashTable这两种集合保证线程安全的方式，会在使用时锁住整个对象，粒度太大，所以在并发情况下直接效率并不理想，这时候就提出了新的解决方案，CopyOnWritArrayList通过复制写入的方式，在写入数据时先复制一份，再将修改后的数据写入原来的数据，这种方式不需要加读锁，大大提高了运行效率，但如果数据量比较大的时候会造成一定的延迟。    ConcurrentHashMap相比于HashTable的锁住整个结构采用了分段锁的方式，加入了一个新的数组，将哈希表分割为若干个块，每次使用时只会锁住所使用的那个块，而在jdk1.8中对ConcurrentHashMap进行了优化，取消了这个分割数组，将每个锁直接赋给了原来的数组上，只有当两个线程访问到同一个哈希地址的时候才会触发锁，同时使用CAS机制，使得它的效率和HashMap接近。</code></pre><h2 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h2><pre><code class="hljs">    当一个线程访问一个数据时，会先拿到一个预期的值和要修改的值，在拿到数据后会将数据跟预期值比较，如果相同才会将数据改为要修改的值，否则就会进入下一次循环。</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>java基础</title>
+    <link href="/2022/07/19/%E5%9F%BA%E7%A1%80/"/>
+    <url>/2022/07/19/%E5%9F%BA%E7%A1%80/</url>
+    
+    <content type="html"><![CDATA[<h2 id="重载和重写"><a href="#重载和重写" class="headerlink" title="重载和重写"></a>重载和重写</h2><pre><code class="hljs">    重载相当于一种多义词。在同一个类中实现重载的话两个方法的方法名必须相同，参数列表必须不同(数据类型不同、参数多少不同)。    重写与重载不同，它基于多态，是子类继承父类的方法后对其进行修改。重写必须保证子类中方法的方法名、参数列表、返回值与父类中的方法相同，而且重写的方法不能抛出大于父类方法的异常，同时它的访问权限修饰符不能小于父类中的方法。</code></pre><h2 id="x3D-x3D-和equals"><a href="#x3D-x3D-和equals" class="headerlink" title="&#x3D;&#x3D;和equals"></a>&#x3D;&#x3D;和equals</h2><pre><code class="hljs">    ==比较的是两个变量所指向的值，对于两个基本数据类型来说，直接使用==进行比较没有问题，但如果是两个引用类型使用==比较的就是各自指向的内存地址。equals默认实现也是==，通常会重写equals方法用来比较两个引用数据类型的值，比如String类中的equals方法就重写了，首先比较两个对象的内存地址， 如果相同则返回true，如果不是则继续比较每个字符，相同的话则返回true。</code></pre><h2 id="内存区-待完善"><a href="#内存区-待完善" class="headerlink" title="内存区(待完善)"></a>内存区(待完善)</h2><pre><code class="hljs">    jvm的公共内存大致分为堆、栈、方法区，堆中存放实例对象和数组，栈中存放基本数据类型和对对象的引用，方法区中存放方法信息(方法名、方法类型 等等)、类型信息(类、接口、注解等等的有效名)，同时方法区中还有一个常量池，存放不可变的常量。比如User user = new User（）;这行代码，User会保留在方法区，user会保留在栈中，new User()会保留在堆内存中，当代码运行时会通过方法区的信息获取到数据类型同时在堆内存中开辟出改对象的内存空间，最后将该对象的内存地址赋给栈中的变量。</code></pre><h2 id="String的内存分配"><a href="#String的内存分配" class="headerlink" title="String的内存分配"></a>String的内存分配</h2><pre><code class="hljs">    String对象的底层实现是一个加了final修饰的char数组，所以String实际上是不可变的，而且String对象存储在常量池中。    String s1 = &quot;str&quot;;    String s2 = new String(&quot;str&quot;);    这两个方法创建对象的过程不一样，第一种创建字符串时，直接在常量池中创建数据然后将内存地址赋给了s1变量，而第二种方式是将常量池中的内存地址赋给堆内存中String对象，然后再把String对象的地址赋给s2。</code></pre><h2 id="interface和abstract"><a href="#interface和abstract" class="headerlink" title="interface和abstract"></a>interface和abstract</h2><pre><code class="hljs">    抽象类中不能有变量，抽象类中的方法可以是抽象方法或者普通方法，抽象类中的抽象方法必须被继承的子类实现，抽象类不能用来创建对象，抽象类有构造方法且只能单继承。    接口中可以有方法和变量，但是它的变量全是被public static final修饰的，方法全被public abstract修饰，接口没有构造方法但是可以多实现。    抽像类一般用于定义一种模范，而接口一般用于定义一种功能。</code></pre><h2 id="自动装箱和自动拆箱"><a href="#自动装箱和自动拆箱" class="headerlink" title="自动装箱和自动拆箱"></a>自动装箱和自动拆箱</h2><pre><code class="hljs">    每个基本数据类型都有各自对应的包装类，这些包装类创建出来的数据都是对象，而自动装箱就是再需要将基本数据类型转换为引用数据类型时，自动将其转换，反之则是自动拆箱，那么这么做的意义是什么呢？    众所周知集合中时不允许加入基本数据类型的，如果往集合中加入一个基本数据类型就需要将其转换为对象，而当我们需要对这个数据进行计算的时候又需要把他转换成基本数据类型，这时自动装箱和自动拆箱的意义就体现出来了。</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/05/20/hello-world/"/>
+    <url>/2022/05/20/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
     
   </entry>
   
