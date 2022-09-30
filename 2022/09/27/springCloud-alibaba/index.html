@@ -16,19 +16,22 @@
   <meta name="author" content="cck1718">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title">
-<meta property="og:url" content="http://example.com/2022/09/25/git/index.html">
+    <meta name="description" content="Spring Cloud - alibabaspring cloud alibaba是alibaba针对springcloud微服务项目提供的一站式解决方案，相当于在原有的spring cloud工具集上的扩展，提供了一些替代组件 nacos nacos是alibaba提供的组件 既是服务注册中心又是统一配置中心，将两者结合起来。nacos支持服务注册与发现，实现服务注册的负载均衡，与consul">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringCloud-alibaba">
+<meta property="og:url" content="http://example.com/2022/09/27/springCloud-alibaba/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="Spring Cloud - alibabaspring cloud alibaba是alibaba针对springcloud微服务项目提供的一站式解决方案，相当于在原有的spring cloud工具集上的扩展，提供了一些替代组件 nacos nacos是alibaba提供的组件 既是服务注册中心又是统一配置中心，将两者结合起来。nacos支持服务注册与发现，实现服务注册的负载均衡，与consul">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-25T09:04:18.175Z">
-<meta property="article:modified_time" content="2022-09-25T09:04:18.175Z">
+<meta property="article:published_time" content="2022-09-27T14:31:27.000Z">
+<meta property="article:modified_time" content="2022-09-30T07:59:53.993Z">
 <meta property="article:author" content="cck1718">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title></title>
+  <title>SpringCloud-alibaba - </title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="SpringCloud-alibaba"></span>
           
         </div>
 
@@ -204,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-25 17:04" pubdate>
-          2022年9月25日 下午
+        <time datetime="2022-09-27 22:31" pubdate>
+          2022年9月27日 晚上
         </time>
       </span>
     
@@ -216,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.5k 字
         
       </span>
     
@@ -227,7 +230,7 @@
         
         
         
-          1 分钟
+          13 分钟
         
       </span>
     
@@ -265,12 +268,38 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">SpringCloud-alibaba</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h2 id="Spring-Cloud-alibaba"><a href="#Spring-Cloud-alibaba" class="headerlink" title="Spring Cloud - alibaba"></a>Spring Cloud - alibaba</h2><p>spring cloud alibaba是alibaba针对springcloud微服务项目提供的一站式解决方案，相当于在原有的spring cloud工具集上的扩展，提供了一些替代组件</p>
+<h3 id="nacos"><a href="#nacos" class="headerlink" title="nacos"></a>nacos</h3><ul>
+<li>nacos是alibaba提供的组件 既是服务注册中心又是统一配置中心，将两者结合起来。nacos支持服务注册与发现，实现服务注册的负载均衡，与consul不需要另外编写服务端，同时实现了配置的统一管理，使用nacos管理配置文件不需要连接远程仓库，nacos自身包含了库并且支持持久化和自动刷新。</li>
+<li>nacos默认端口为8848</li>
+</ul>
+<h4 id="nacos服务注册"><a href="#nacos服务注册" class="headerlink" title="nacos服务注册"></a>nacos服务注册</h4><ul>
+<li>引入依赖 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--nacos client--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li>配置文件<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8989</span><br><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">application:</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">NACOSCLIENT</span><br>  <span class="hljs-comment">#向nacos server注册</span><br>  <span class="hljs-attr">cloud:</span><br>    <span class="hljs-attr">nacos:</span><br>      <span class="hljs-attr">server-addr:</span> <span class="hljs-string">localhost:8848</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="nacos-config-client"><a href="#nacos-config-client" class="headerlink" title="nacos config client"></a>nacos config client</h3><ul>
+<li>引入依赖<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--nacos config client--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-config<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li>配置文件</li>
+</ul>
+<p>无论是什么配置组件，在服务启动时都需要提前去配置号配置中心的信息方便拉取配置中心的文件，所以config client服务的配置文件应该命名为bootstrap</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">cloud:</span><br>    <span class="hljs-attr">nacos:</span><br>      <span class="hljs-attr">config:</span><br>        <span class="hljs-attr">server-addr:</span> <span class="hljs-string">localhost:8848</span> <span class="hljs-comment">#config server地址</span><br>        <span class="hljs-attr">group:</span> <span class="hljs-string">CONFIGCLIENT</span>  <span class="hljs-comment">#所在组名</span><br>        <span class="hljs-attr">name:</span> <span class="hljs-string">configClient-prod</span> <span class="hljs-comment">#拉取哪个文件 文件名+版本名</span><br>        <span class="hljs-attr">file-extension:</span> <span class="hljs-string">yml</span> <span class="hljs-comment">#后缀</span><br></code></pre></td></tr></table></figure>
+<h3 id="nacos-server"><a href="#nacos-server" class="headerlink" title="nacos server"></a>nacos server</h3><ul>
+<li>nacos的server不需要零星编写，进入localhost:8848&#x2F;nacos即可访问，默认账号密码为nacos</li>
+<li>可以通过nacos的图形化管理界面查看服务注册和配置中心，nacos三大核心：DataId、GroupId、命名空间。</li>
+<li>命名空间，可以用于分别不同微服务项目的配置文件。</li>
+<li>GroupId，可以用于分别一个微服务项目下的不同模块</li>
+<li>DataId，配置文件的名称，由文件名和版本组成。</li>
+</ul>
+<h4 id="nacos-server-配置文件管理"><a href="#nacos-server-配置文件管理" class="headerlink" title="nacos server 配置文件管理"></a>nacos server 配置文件管理</h4><ul>
+<li>nacos可以对配置文件进行版本控制和文件导入导出，在修改文件后会自动刷新配置文件，只需要在调用方法上加上自动刷新注解。</li>
+<li>nacos的配置文件默认存储在内嵌的数据库中，但是该数据库不支持图形查看，官方另外支持mysql来实现数据的持久化，只需要在nacos配置文件中修改配置后在创建nacos数据库并将nacos提供的sql文件导入即可。</li>
+</ul>
+<h2 id="sentinel"><a href="#sentinel" class="headerlink" title="sentinel"></a>sentinel</h2>
                 
               </div>
             
@@ -278,6 +307,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/java/">#java</a>
+      
+    </div>
   
 </div>
 
@@ -287,8 +323,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/09/25/git/</div>
+      <div>SpringCloud-alibaba</div>
+      <div>http://example.com/2022/09/27/springCloud-alibaba/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +336,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月25日</div>
+          <div>2022年9月27日</div>
         </div>
       
       
@@ -332,17 +368,11 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/27/springCloud-alibaba/" title="SpringCloud-alibaba">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringCloud-alibaba</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/25/mysql/" title="">
+                      <a href="/2022/09/25/git/" title="">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
