@@ -24,7 +24,7 @@
 <meta property="og:description" content="Spring Cloud - alibabaspring cloud alibaba是alibaba针对springcloud微服务项目提供的一站式解决方案，相当于在原有的spring cloud工具集上的扩展，提供了一些替代组件 nacos nacos是alibaba提供的组件 既是服务注册中心又是统一配置中心，将两者结合起来。nacos支持服务注册与发现，实现服务注册的负载均衡，与consul">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-27T14:31:27.000Z">
-<meta property="article:modified_time" content="2022-09-30T07:59:53.993Z">
+<meta property="article:modified_time" content="2022-10-01T04:49:48.569Z">
 <meta property="article:author" content="cck1718">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          3.2k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          13 分钟
+          27 分钟
         
       </span>
     
@@ -299,7 +299,26 @@
 <li>nacos可以对配置文件进行版本控制和文件导入导出，在修改文件后会自动刷新配置文件，只需要在调用方法上加上自动刷新注解。</li>
 <li>nacos的配置文件默认存储在内嵌的数据库中，但是该数据库不支持图形查看，官方另外支持mysql来实现数据的持久化，只需要在nacos配置文件中修改配置后在创建nacos数据库并将nacos提供的sql文件导入即可。</li>
 </ul>
-<h2 id="sentinel"><a href="#sentinel" class="headerlink" title="sentinel"></a>sentinel</h2>
+<h2 id="sentinel"><a href="#sentinel" class="headerlink" title="sentinel"></a>sentinel</h2><p>sentinel组件对服务进行监控，能够实现流量监控、服务熔断、热点参数监控、系统规则、用户权限等控制，同时sentinelDashboard提供图形化操作页面，不需要跟hystrix一样编写代码，可以直接在图形化页面操作规则。</p>
+<ul>
+<li>QPS 每秒请求数</li>
+<li>RT 平均响应时间</li>
+</ul>
+<h3 id="sentinelDashboard"><a href="#sentinelDashboard" class="headerlink" title="sentinelDashboard"></a>sentinelDashboard</h3><p>需要下载jar包后启动，默认端口时8080，默认账户密码是sentinel。通过dashboard可以实时监控资源，但是每次新增资源必须访问资源和刷新dashboard一次。同时还能直接定义各种熔断降级规则，不需要写代码。</p>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p>设置某资源的规则，违反规则服务就会熔断，如果超过则该资源熔断且进入等待时间，等待时间过后即可再次访问该资源</p>
+<ul>
+<li>流量监控：每秒内允许访问次数，超过则服务熔断。</li>
+<li>超时监控：设置最大响应时间，超过则服务熔断。</li>
+<li>热点参数规则：根据下标(0开始)获取请求中的参数，可以根据参数或者参数特定的值的出现次数来定义熔断。</li>
+<li>在方法上加入@SentinelResource声明该资源是一个sentinel资源，同时确定该资源的别名，还可以给该资源自定义处理熔断时的方法和出路业务错误的方法。</li>
+</ul>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>启动sentinelDashboard jar包</li>
+<li>在服务中引入sentinel依赖<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--sentinel--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-sentinel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span> <br></code></pre></td></tr></table></figure></li>
+<li>配置文件<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8905</span><br><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">application:</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">SENTINEL</span><br>  <span class="hljs-attr">cloud:</span><br>    <span class="hljs-attr">sentinel:</span><br>      <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span> <span class="hljs-comment">#开启sentinel保护</span><br>      <span class="hljs-attr">transport:</span><br>        <span class="hljs-attr">dashboard:</span> <span class="hljs-string">localhost:8080</span> <span class="hljs-comment">#dashboardweb地址</span><br>        <span class="hljs-attr">port:</span> <span class="hljs-number">8719</span> <span class="hljs-comment">#sentinel组件间通信地址</span><br></code></pre></td></tr></table></figure></li>
+<li>定义资源别名<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/demo&quot;</span>)<br><span class="hljs-meta">@SentinelResource</span>(value = <span class="hljs-string">&quot;demo&quot;</span>,blockHandler = <span class="hljs-string">&quot;blockHandler&quot;</span>, defaultFallback = <span class="hljs-string">&quot;defaultFallback&quot;</span>) <span class="hljs-comment">//0 资源别名  1 blockHandler  处理方法 3 defaultFallback 默认处理业务异常方法 4 Fallback 指定处理业务异常方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">Integer id</span>)&#123;<br>    <span class="hljs-title class_">System</span>.<span class="hljs-property">out</span>.<span class="hljs-title function_">println</span>(<span class="hljs-string">&quot;demo ok&quot;</span>);<br>    <span class="hljs-keyword">if</span> (id &lt; <span class="hljs-number">0</span>)&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;c&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span>  <span class="hljs-string">&quot;demo ok&quot;</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">defaultFallback</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;出错了&quot;</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">blockHandler</span>(<span class="hljs-params">Integer id, BlockException e</span>)&#123;<br>    <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">FlowException</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;当前资源被流控&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">DegradeException</span>)&#123;<br>        <span class="hljs-keyword">return</span>  <span class="hljs-string">&quot;当前资源降级&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">ParamFlowException</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;热点限流&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">SystemBlockException</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;系统限制&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;权限控制&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+
                 
               </div>
             
