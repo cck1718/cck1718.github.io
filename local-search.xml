@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>Swagger</title>
+    <link href="/2022/10/16/swagger/"/>
+    <url>/2022/10/16/swagger/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Swagger简介"><a href="#Swagger简介" class="headerlink" title="Swagger简介"></a>Swagger简介</h1><p>Swagger用于根据后端代码自动生成接口API文档，不需要手动维护于多次更新迭代，同时提供接口调试等功能方便前后端联调。</p><h1 id="Swagger使用"><a href="#Swagger使用" class="headerlink" title="Swagger使用"></a>Swagger使用</h1><h2 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--swagger--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.springfox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>springfox-swagger2<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.9.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.springfox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.9.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">2022 10 16</span><br><span class="hljs-comment">3.0版本使用问题</span><br><span class="hljs-comment">使用3.0版本无论访问swagger-ui.html还是swagger-ui/index.html都无法进入页面</span><br><span class="hljs-comment">--&gt;</span><br></code></pre></td></tr></table></figure><h2 id="放行请求"><a href="#放行请求" class="headerlink" title="放行请求"></a>放行请求</h2><ul><li>防止访问ui页面请求被拦截,通知拦截器放行下列请求<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;/swagger-ui.html&quot;</span>,<br><span class="hljs-string">&quot;/v2/**&quot;</span>,<br><span class="hljs-string">&quot;/v3/**&quot;</span>,<br><span class="hljs-string">&quot;/webjars/**&quot;</span>,<br><span class="hljs-string">&quot;/swagger-resources/**&quot;</span><br></code></pre></td></tr></table></figure></li></ul><h2 id="配置Swagger"><a href="#配置Swagger" class="headerlink" title="配置Swagger"></a>配置Swagger</h2><ul><li>创建Swagger配置类<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@Configuration</span><br><span class="hljs-variable">@EnableSwagger2</span> <span class="hljs-comment">//开启Swagger</span><br>public class SwaggerConfig &#123;<br>    <span class="hljs-variable">@Bean</span><br>    public Docket <span class="hljs-built_in">createRestApi</span>()&#123;<br>        <span class="hljs-selector-tag">return</span> <span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">Docket</span>(DocumentationType.SWAGGER_2)<br>                <span class="hljs-selector-class">.pathMapping</span>(<span class="hljs-string">&quot;/&quot;</span>)<br>                <span class="hljs-selector-class">.select</span>()<br>                <span class="hljs-comment">//设置扫描接口所在包</span><br>                <span class="hljs-selector-class">.apis</span>(RequestHandlerSelectors.<span class="hljs-built_in">basePackage</span>(<span class="hljs-string">&quot;com.cck.controller&quot;</span>))<br>                <span class="hljs-selector-class">.paths</span>(PathSelectors.<span class="hljs-built_in">any</span>())<br>                <span class="hljs-selector-class">.build</span>()<span class="hljs-selector-class">.apiInfo</span>(new <span class="hljs-built_in">ApiInfoBuilder</span>()<br>                        <span class="hljs-comment">//swagger文档标题</span><br>                        .<span class="hljs-built_in">title</span>(<span class="hljs-string">&quot;newspaper后端API&quot;</span>)<br>                        .<span class="hljs-built_in">description</span>(<span class="hljs-string">&quot;newspaper后端API,详细信息...&quot;</span>)<br>                        .<span class="hljs-built_in">version</span>(<span class="hljs-string">&quot;1.1&quot;</span>)<br>                        .<span class="hljs-built_in">contact</span>(new <span class="hljs-built_in">Contact</span>(<span class="hljs-string">&quot;cck1718&quot;</span>,<span class="hljs-string">&quot;https://cck1718.github.io&quot;</span>,<span class="hljs-string">&quot;1229584275@qq.com&quot;</span>))<br><br>                        <span class="hljs-comment">/*</span><br><span class="hljs-comment">                        设置接口规范</span><br><span class="hljs-comment">                        .license(&quot;&quot;)</span><br><span class="hljs-comment">                        .licenseUrl(&quot;&quot;)*/</span><br><br>                        .<span class="hljs-built_in">build</span>());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li></ul><h2 id="在方法中配置具体属性"><a href="#在方法中配置具体属性" class="headerlink" title="在方法中配置具体属性"></a>在方法中配置具体属性</h2><ul><li>在类上加@Api()注解<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-meta">@Api(tags=<span class="hljs-string">&quot;用户接口描述&quot;</span>)</span> <span class="hljs-comment">//如果不加这行注解默认swagger页面中的这个类的API就是User Controller 不方便使用</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UserController</span>&#123;<br> ···<br>&#125;<br></code></pre></td></tr></table></figure></li><li>在方法上加@ApiOperation()注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@ApiOperation</span>(value = <span class="hljs-string">&quot;查询用户是否被注册接口&quot;</span>,notes = <span class="hljs-string">&quot;根据username属性查询该用户名是否已经被注册&quot;</span>)<br><span class="hljs-comment">// value 为具体的接口起别名    notes 对当前接口的功能描述</span><br>public ResponseResult <span class="hljs-built_in">findName</span>(<span class="hljs-variable">@RequestBody</span> User user)&#123;<br>    ···<br>&#125;<br></code></pre></td></tr></table></figure></li><li>在方法上加@ApiImplicitParams注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@ApiImplicitParams</span>(&#123;<br>        <span class="hljs-comment">//一个@ApiImplicitParam注解代表一个请求参数</span><br>        <span class="hljs-comment">//name 参数名  value 参数描述  dataType 参数类型</span><br>        <span class="hljs-variable">@ApiImplicitParam</span>(name = <span class="hljs-string">&quot;username&quot;</span>,value = <span class="hljs-string">&quot;传入用户id&quot;</span>,dataType = <span class="hljs-string">&quot;String&quot;</span>)<br>&#125;)<br>public ResponseResult <span class="hljs-built_in">findName</span>(<span class="hljs-variable">@RequestBody</span> User user)&#123;<br>    ···<br>&#125;<br></code></pre></td></tr></table></figure></li><li>在方法上加@ApiResponses()注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-comment">//设置请求错误信息</span><br><span class="hljs-variable">@ApiResponses</span>(&#123;<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">200</span>,message = <span class="hljs-string">&quot;成功&quot;</span>),<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">404</span>,message = <span class="hljs-string">&quot;失败&quot;</span>)<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">401</span>,message = <span class="hljs-string">&quot;失败&quot;</span>)<br>&#125;)<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>利用自身电脑搭建服务器并运行项目</title>
+    <link href="/2022/10/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <url>/2022/10/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id="开启IIS-Internet-Information-Service"><a href="#开启IIS-Internet-Information-Service" class="headerlink" title="开启IIS(Internet Information Service)"></a>开启IIS(Internet Information Service)</h3><ul><li>windows控制面板</li><li>程序</li><li>启用或关闭windows功能</li><li>将Internet Information Service服务全部打开</li></ul><h3 id="打包项目"><a href="#打包项目" class="headerlink" title="打包项目"></a>打包项目</h3><ul><li>打包vue前端项目和后端jar包</li></ul><h3 id="配置IIS信息"><a href="#配置IIS信息" class="headerlink" title="配置IIS信息"></a>配置IIS信息</h3><ul><li><p>打开IIS</p></li><li><p>选择添加网站</p></li><li><p>配置网站路径</p><pre><code class="hljs">网站路径为vue项目包的根目录</code></pre></li><li><p>设置ip地址和端口号</p></li></ul><h3 id="网址暴露"><a href="#网址暴露" class="headerlink" title="网址暴露"></a>网址暴露</h3><ul><li>使用Natapp工具代理前端和后端地址</li><li>将前端项目中的请求路径改为代理后的地址</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>服务器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SpringCloud-alibaba</title>
     <link href="/2022/09/27/springCloud-alibaba/"/>
     <url>/2022/09/27/springCloud-alibaba/</url>
@@ -23,78 +61,19 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/09/25/git/"/>
-    <url>/2022/09/25/git/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
+    <title>MySQL</title>
     <link href="/2022/09/25/mysql/"/>
     <url>/2022/09/25/mysql/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>mysql属于典型的关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。</p>]]></content>
     
     
     
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2022/09/25/io/"/>
-    <url>/2022/09/25/io/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2022/09/25/springBoot/"/>
-    <url>/2022/09/25/springBoot/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2022/09/25/mybatis/"/>
-    <url>/2022/09/25/mybatis/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2022/09/25/springMVC/"/>
-    <url>/2022/09/25/springMVC/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
+    <tags>
+      
+      <tag>数据库</tag>
+      
+    </tags>
     
   </entry>
   
@@ -139,11 +118,11 @@
   
   
   <entry>
-    <title>SpringCloud</title>
+    <title>Spring</title>
     <link href="/2022/08/23/spring/"/>
     <url>/2022/08/23/spring/</url>
     
-    <content type="html"><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="什么是spring"><a href="#什么是spring" class="headerlink" title="什么是spring"></a>什么是spring</h2><pre><code class="hljs">spring是一个</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="什么是spring"><a href="#什么是spring" class="headerlink" title="什么是spring"></a>什么是spring</h2><p>spring是一个轻量级java开发框架，它将业务逻辑层、持久层、视图层等层之间解耦合，同时spring时整个spring生态的基石，通过spring可以整合spring生态中的各种框架。spring的核心目的就是简化开发，它的核心在于AOP和IOC。</p><h2 id="AOP和IOC"><a href="#AOP和IOC" class="headerlink" title="AOP和IOC"></a>AOP和IOC</h2>]]></content>
     
     
     
