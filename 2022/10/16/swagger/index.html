@@ -16,19 +16,22 @@
   <meta name="author" content="cck1718">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title">
-<meta property="og:url" content="http://example.com/2022/09/25/io/index.html">
+    <meta name="description" content="Swagger简介Swagger用于根据后端代码自动生成接口API文档，不需要手动维护于多次更新迭代，同时提供接口调试等功能方便前后端联调。 Swagger使用引入依赖12345678910111213141516&lt;!--swagger--&gt;&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swagger">
+<meta property="og:url" content="http://example.com/2022/10/16/swagger/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="Swagger简介Swagger用于根据后端代码自动生成接口API文档，不需要手动维护于多次更新迭代，同时提供接口调试等功能方便前后端联调。 Swagger使用引入依赖12345678910111213141516&lt;!--swagger--&gt;&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-25T09:03:32.116Z">
-<meta property="article:modified_time" content="2022-09-25T09:03:32.116Z">
+<meta property="article:published_time" content="2022-10-16T11:24:20.511Z">
+<meta property="article:modified_time" content="2022-10-16T11:43:19.769Z">
 <meta property="article:author" content="cck1718">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title></title>
+  <title>Swagger - </title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Swagger"></span>
           
         </div>
 
@@ -204,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-25 17:03" pubdate>
-          2022年9月25日 下午
+        <time datetime="2022-10-16 19:24" pubdate>
+          2022年10月16日 晚上
         </time>
       </span>
     
@@ -216,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2.3k 字
         
       </span>
     
@@ -227,7 +230,7 @@
         
         
         
-          1 分钟
+          19 分钟
         
       </span>
     
@@ -265,12 +268,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">Swagger</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h1 id="Swagger简介"><a href="#Swagger简介" class="headerlink" title="Swagger简介"></a>Swagger简介</h1><p>Swagger用于根据后端代码自动生成接口API文档，不需要手动维护于多次更新迭代，同时提供接口调试等功能方便前后端联调。</p>
+<h1 id="Swagger使用"><a href="#Swagger使用" class="headerlink" title="Swagger使用"></a>Swagger使用</h1><h2 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--swagger--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.springfox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>springfox-swagger2<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.9.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.springfox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.9.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">2022 10 16</span><br><span class="hljs-comment">3.0版本使用问题</span><br><span class="hljs-comment">使用3.0版本无论访问swagger-ui.html还是swagger-ui/index.html都无法进入页面</span><br><span class="hljs-comment">--&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="放行请求"><a href="#放行请求" class="headerlink" title="放行请求"></a>放行请求</h2><ul>
+<li>防止访问ui页面请求被拦截,通知拦截器放行下列请求<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;/swagger-ui.html&quot;</span>,<br><span class="hljs-string">&quot;/v2/**&quot;</span>,<br><span class="hljs-string">&quot;/v3/**&quot;</span>,<br><span class="hljs-string">&quot;/webjars/**&quot;</span>,<br><span class="hljs-string">&quot;/swagger-resources/**&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="配置Swagger"><a href="#配置Swagger" class="headerlink" title="配置Swagger"></a>配置Swagger</h2><ul>
+<li>创建Swagger配置类<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@Configuration</span><br><span class="hljs-variable">@EnableSwagger2</span> <span class="hljs-comment">//开启Swagger</span><br>public class SwaggerConfig &#123;<br>    <span class="hljs-variable">@Bean</span><br>    public Docket <span class="hljs-built_in">createRestApi</span>()&#123;<br>        <span class="hljs-selector-tag">return</span> <span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">Docket</span>(DocumentationType.SWAGGER_2)<br>                <span class="hljs-selector-class">.pathMapping</span>(<span class="hljs-string">&quot;/&quot;</span>)<br>                <span class="hljs-selector-class">.select</span>()<br>                <span class="hljs-comment">//设置扫描接口所在包</span><br>                <span class="hljs-selector-class">.apis</span>(RequestHandlerSelectors.<span class="hljs-built_in">basePackage</span>(<span class="hljs-string">&quot;com.cck.controller&quot;</span>))<br>                <span class="hljs-selector-class">.paths</span>(PathSelectors.<span class="hljs-built_in">any</span>())<br>                <span class="hljs-selector-class">.build</span>()<span class="hljs-selector-class">.apiInfo</span>(new <span class="hljs-built_in">ApiInfoBuilder</span>()<br>                        <span class="hljs-comment">//swagger文档标题</span><br>                        .<span class="hljs-built_in">title</span>(<span class="hljs-string">&quot;newspaper后端API&quot;</span>)<br>                        .<span class="hljs-built_in">description</span>(<span class="hljs-string">&quot;newspaper后端API,详细信息...&quot;</span>)<br>                        .<span class="hljs-built_in">version</span>(<span class="hljs-string">&quot;1.1&quot;</span>)<br>                        .<span class="hljs-built_in">contact</span>(new <span class="hljs-built_in">Contact</span>(<span class="hljs-string">&quot;cck1718&quot;</span>,<span class="hljs-string">&quot;https://cck1718.github.io&quot;</span>,<span class="hljs-string">&quot;1229584275@qq.com&quot;</span>))<br><br>                        <span class="hljs-comment">/*</span><br><span class="hljs-comment">                        设置接口规范</span><br><span class="hljs-comment">                        .license(&quot;&quot;)</span><br><span class="hljs-comment">                        .licenseUrl(&quot;&quot;)*/</span><br><br>                        .<span class="hljs-built_in">build</span>());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="在方法中配置具体属性"><a href="#在方法中配置具体属性" class="headerlink" title="在方法中配置具体属性"></a>在方法中配置具体属性</h2><ul>
+<li>在类上加@Api()注解<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-meta">@Api(tags=<span class="hljs-string">&quot;用户接口描述&quot;</span>)</span> <span class="hljs-comment">//如果不加这行注解默认swagger页面中的这个类的API就是User Controller 不方便使用</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UserController</span>&#123;<br> ···<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在方法上加@ApiOperation()注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@ApiOperation</span>(value = <span class="hljs-string">&quot;查询用户是否被注册接口&quot;</span>,notes = <span class="hljs-string">&quot;根据username属性查询该用户名是否已经被注册&quot;</span>)<br><span class="hljs-comment">// value 为具体的接口起别名    notes 对当前接口的功能描述</span><br>public ResponseResult <span class="hljs-built_in">findName</span>(<span class="hljs-variable">@RequestBody</span> User user)&#123;<br>    ···<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在方法上加@ApiImplicitParams注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@ApiImplicitParams</span>(&#123;<br>        <span class="hljs-comment">//一个@ApiImplicitParam注解代表一个请求参数</span><br>        <span class="hljs-comment">//name 参数名  value 参数描述  dataType 参数类型</span><br>        <span class="hljs-variable">@ApiImplicitParam</span>(name = <span class="hljs-string">&quot;username&quot;</span>,value = <span class="hljs-string">&quot;传入用户id&quot;</span>,dataType = <span class="hljs-string">&quot;String&quot;</span>)<br>&#125;)<br>public ResponseResult <span class="hljs-built_in">findName</span>(<span class="hljs-variable">@RequestBody</span> User user)&#123;<br>    ···<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在方法上加@ApiResponses()注解<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-comment">//设置请求错误信息</span><br><span class="hljs-variable">@ApiResponses</span>(&#123;<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">200</span>,message = <span class="hljs-string">&quot;成功&quot;</span>),<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">404</span>,message = <span class="hljs-string">&quot;失败&quot;</span>)<br>        <span class="hljs-variable">@ApiResponse</span>(code = <span class="hljs-number">401</span>,message = <span class="hljs-string">&quot;失败&quot;</span>)<br>&#125;)<br></code></pre></td></tr></table></figure></li>
+</ul>
+
                 
               </div>
             
@@ -278,6 +295,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/java/">#java</a>
+      
+    </div>
   
 </div>
 
@@ -287,8 +311,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/09/25/io/</div>
+      <div>Swagger</div>
+      <div>http://example.com/2022/10/16/swagger/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +324,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月25日</div>
+          <div>2022年10月16日</div>
         </div>
       
       
@@ -332,18 +356,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/25/mysql/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/25/springBoot/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2022/10/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="利用自身电脑搭建服务器并运行项目">
+                        <span class="hidden-mobile">利用自身电脑搭建服务器并运行项目</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
