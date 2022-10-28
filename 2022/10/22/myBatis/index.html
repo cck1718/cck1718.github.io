@@ -16,22 +16,22 @@
   <meta name="author" content="cck1718">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Spring Spring是一个轻量级开发框架，是整个Spring生态系统的基石，它的核心是IOC和AOP Spring具有很好的扩展性，方便整合第三方框架 Spring极大的降低了对象之间的耦合度  IOCIOC控制反转是一种设计思想，将对象交给容器维护，不需要考虑对象的创建和销毁只需要声明对象间的依赖关系即可。IOC的实现方式是依靠DI。 DI DI 依赖注入，在对象需要调用零一个对象时，无需">
+    <meta name="description" content="MyBatisORM ORM 对象关系映射通俗的讲就是描述对象和数据库中的元数据将对对象持久化到数据库中 MyBatis是一个半ORM框架，它还需要手动编写SQL语句，能够松解SQL语句和程序之间的耦合度但是非常依赖数据库，移植性较差  MyBatis和JDBC MyBatis底层通过JDBC实现 MyBatis解决了JDBC代码冗余、不易维护、资源浪费等问题 MyBatis提供连接池解决资源浪费">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring">
-<meta property="og:url" content="http://example.com/2022/08/23/spring/index.html">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="http://example.com/2022/10/22/myBatis/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Spring Spring是一个轻量级开发框架，是整个Spring生态系统的基石，它的核心是IOC和AOP Spring具有很好的扩展性，方便整合第三方框架 Spring极大的降低了对象之间的耦合度  IOCIOC控制反转是一种设计思想，将对象交给容器维护，不需要考虑对象的创建和销毁只需要声明对象间的依赖关系即可。IOC的实现方式是依靠DI。 DI DI 依赖注入，在对象需要调用零一个对象时，无需">
+<meta property="og:description" content="MyBatisORM ORM 对象关系映射通俗的讲就是描述对象和数据库中的元数据将对对象持久化到数据库中 MyBatis是一个半ORM框架，它还需要手动编写SQL语句，能够松解SQL语句和程序之间的耦合度但是非常依赖数据库，移植性较差  MyBatis和JDBC MyBatis底层通过JDBC实现 MyBatis解决了JDBC代码冗余、不易维护、资源浪费等问题 MyBatis提供连接池解决资源浪费">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-23T15:12:27.000Z">
-<meta property="article:modified_time" content="2022-10-21T14:04:01.454Z">
+<meta property="article:published_time" content="2022-10-22T12:02:03.481Z">
+<meta property="article:modified_time" content="2022-10-28T13:34:29.690Z">
 <meta property="article:author" content="cck1718">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Spring - </title>
+  <title>MySQL - </title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Spring"></span>
+            <span id="subtitle" data-typed-text="MySQL"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-23 23:12" pubdate>
-          2022年8月23日 晚上
+        <time datetime="2022-10-22 20:02" pubdate>
+          2022年10月22日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.9k 字
+          2.4k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          25 分钟
+          20 分钟
         
       </span>
     
@@ -268,151 +268,109 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Spring</h1>
+            <h1 style="display: none">MySQL</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><ul>
-<li>Spring是一个轻量级开发框架，是整个Spring生态系统的基石，它的核心是IOC和AOP</li>
-<li>Spring具有很好的扩展性，方便整合第三方框架</li>
-<li>Spring极大的降低了对象之间的耦合度</li>
+                <h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h1><h2 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h2><ul>
+<li>ORM 对象关系映射通俗的讲就是描述对象和数据库中的元数据将对对象持久化到数据库中</li>
+<li>MyBatis是一个半ORM框架，它还需要手动编写SQL语句，能够松解SQL语句和程序之间的耦合度但是非常依赖数据库，移植性较差</li>
 </ul>
-<h1 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h1><p>IOC控制反转是一种设计思想，将对象交给容器维护，不需要考虑对象的创建和销毁只需要声明对象间的依赖关系即可。IOC的实现方式是依靠DI。</p>
-<h2 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h2><ul>
-<li>DI 依赖注入，在对象需要调用零一个对象时，无需手动创建，而是依赖于外部容器的注入，能够消除对象之间的依赖性，达到对象之间的解耦。</li>
-<li>Spring就相当于一个容器，交给容器管理的对象则为一个bean。容器相当于一个map集合，且容器创建的bean对象默认是单例的，容器创建好一个对象后根据设置的id将对象存入map。</li>
-<li>当需要使用到bean时可以直接将对象注入到程序中使用，通常有set注入和构造器注入，set注入是通过bean对象的set方法注入属性，构造器注入通过bean对象的构造方法注入属性。</li>
+<h2 id="MyBatis和JDBC"><a href="#MyBatis和JDBC" class="headerlink" title="MyBatis和JDBC"></a>MyBatis和JDBC</h2><ul>
+<li>MyBatis底层通过JDBC实现</li>
+<li>MyBatis解决了JDBC代码冗余、不易维护、资源浪费等问题</li>
+<li>MyBatis提供连接池解决资源浪费的问题，使用XML配置文件将SQL语句和程序分离，MyBatis自动将Java对象和SQL语句映射转换，解决了SQL语句参数不一定和SQL结果集处理复杂的问题</li>
 </ul>
-<h2 id="bean"><a href="#bean" class="headerlink" title="bean"></a>bean</h2><ul>
-<li>bean的属性<ul>
-<li>class 指定bean对象的数据类型</li>
-<li>id 指定bean对象在容器中的key</li>
-<li>scope 指定作用域，单例、多例</li>
-<li>lazy-init 是否懒加载</li>
-<li>init-method 指定在bean对象实例化完成后的方法 必须时无参</li>
-<li>destroy-method 指定在bean对象被销毁前执行的方法 必须时午餐</li>
-<li>factory-bean 指定工厂来创建bean</li>
-<li>factory-method 指定工厂创建bean所用的方法</li>
-<li>autowire 自动装配</li>
+<h2 id="MyBatis编程步骤"><a href="#MyBatis编程步骤" class="headerlink" title="MyBatis编程步骤"></a>MyBatis编程步骤</h2><ul>
+<li>创建SqlSessionFactory对象</li>
+<li>通过SqlSessionFactory创建SqlSession</li>
+<li>通过SqlSession执行数据库操作</li>
+<li>commit方法提交事务</li>
+<li>close方法关闭会话</li>
 </ul>
-</li>
-<li>bean的生命周期<ul>
-<li>实例化Spring容器ApplicationContext</li>
-<li>调用beanFactoryPostProcessor扫描类</li>
-<li>注册扫描出来的信息<ul>
-<li>实例化一个beanDefinition对象来存储扫描到的信息</li>
-<li>将beanDefinition根据beanname存入beanDefinitionMao中保存</li>
+<h2 id="MyBasit工作原理"><a href="#MyBasit工作原理" class="headerlink" title="MyBasit工作原理"></a>MyBasit工作原理</h2><ul>
+<li>创建SqlSessionFactory</li>
+<li>通过SqlSessionFactory创建SqlSession</li>
+<li>通过JDK动态代理获取mapper代理对象</li>
+<li>数据库交互操作会通过mapper代理对象获取SqlSession中的Executor执行</li>
+<li>Executor执行具体的sql语句，底层的执行原理还是JDBC</li>
 </ul>
-</li>
-<li>实例化bean对象<ul>
-<li>信息验证当前的bean是否懒加载、是否单例等等</li>
-<li>根据beanDefinition实例化一个空的对象</li>
+<h2 id="和-的区别"><a href="#和-的区别" class="headerlink" title="#{}和${}的区别"></a>#{}和${}的区别</h2><ul>
+<li>#{}和${}在Sql语句中都用于用于占位</li>
+<li>${}会直接将收到的数据拼接到Sql语句中，可能会照成Sql注入的问题(字符串拼接导致Sql语句的语义转换)</li>
+<li>#{}会先占据位置，然后MyBatis会先根据已有的信息预编译，之后再将#{}中的数据插入执行，有效避免了Sql注入带来的问题</li>
 </ul>
-</li>
-<li>属性注入<ul>
-<li>正常情况下在Spring容器初始化后创建完bean实例对象就会给对象注入属性，但是设置了懒加载的对象会在第一次调用时注入属性</li>
-<li>bean工厂后置处理方法将属性注入到实例对象当中</li>
-<li>如果bean对象时单例的话默认时允许循环依赖的，为了解决循环依赖Spring提供了三级缓存，singletonObjects存放已经初始化的bean对象，earlSingletonObjects存放实例化的bean对象，singletonFactory存放工厂对象</li>
+<h2 id="Spring-boot整合MyBatis的配置"><a href="#Spring-boot整合MyBatis的配置" class="headerlink" title="Spring boot整合MyBatis的配置"></a>Spring boot整合MyBatis的配置</h2><ul>
+<li>在配置类中创建连接</li>
+<li>在启动类用@MapperScan标识dao文件的位置</li>
+<li>创建dao接口声明操作数据库的方法</li>
+<li>编写mapper.xml文件用于编写Sql语句，默认在扫描位置resource目录下</li>
+<li>明确工作空间——指定改mapper文件所对应的dao文件</li>
+<li>编写sql文件，标签名对应dao中的放啊名</li>
 </ul>
-</li>
-<li>回调aware接口设置工厂信息</li>
-<li>初始化<ul>
-<li>调用初始胡的前置处理方法</li>
-<li>调用自定义的初始化方法 init-method</li>
-<li>调用初始化后置处理方法，aop在本阶段实现</li>
+<h2 id="MyBatis模糊查询"><a href="#MyBatis模糊查询" class="headerlink" title="MyBatis模糊查询"></a>MyBatis模糊查询</h2><ul>
+<li>直接加%</li>
+<li>使用CONCAT函数处理结果 CONCAT( ‘%’ #{} ‘%’ )</li>
+<li>使用bind标签<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">bind</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;like&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot; &#x27;%&#x27; #&#123;&#125; &#x27;%&#x27; &quot;</span> /&gt;</span><br><span class="hljs-comment">&lt;!-- sql语句··· --&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
-</li>
-<li>使用<ul>
-<li>通过容器对象的getBean获取bean的向</li>
+<h2 id="动态sql"><a href="#动态sql" class="headerlink" title="动态sql"></a>动态sql</h2><ul>
+<li>个人理解为所谓动态sql就是将逻辑判断与循环和sql语句相结合，使得程序在运行过程中能够动态的去执行sql语句</li>
+<li>if标签 相当于if语句 在test属性中写逻辑判断表达式</li>
+<li>trim标签 在动态sql难免会有关键字的重复，trim标签可以将关键字覆盖<ul>
+<li>prefixOverrides属性 覆盖前缀</li>
+<li>suffixOverrides属性 覆盖后缀</li>
+<li>prefix属性 添加前缀</li>
+<li>suffix属性 添加后缀</li>
+<li>多个需要覆盖或添加的关键字用|隔开且不能有空格</li>
 </ul>
 </li>
-<li>销毁<ul>
-<li>bean对象会在容器关闭后销毁 </li>
-<li>destroy-method 销毁前方法</li>
-<li>调用销毁方法</li>
+<li>where标签 where标签等价于<trim prefis="where" prefixOverrides="and|or"> 目的为了消除where标签下多个if条件中重复的前缀</li>
+<li>set标签 set标签等价于<trim prefix="set" suffixOverrides=","> 目的为了消除在set中多个if条件间的”,”,加上逗号是为了对更新前的数据进行一次判断</li>
+<li>foreach标签 将参数中的集合或数组遍历 &lt;foreach collection&#x3D;”参数名” open”语句开头” close&#x3D;”语句结尾” item&#x3D;”遍历属性的名称” separator&#x3D;”间隔遍历属性间的符号一般为逗号”&gt;#{定义的遍历属性的名称}</foreach></li>
+<li>choose、when、otherwise choose标签类似于switch，when标签类似于case，而otherwise就相当于default</li>
+<li>sql标签 用于消除冗余代码</li>
+</ul>
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><ul>
+<li>使用resultMap定义接收其他表查询到数据<ul>
+<li>可以使用多个resultMap继承来接受多个表的信息</li>
+<li>可以使用association标签定义其他表的对象映射关系来获取其他表的信息</li>
 </ul>
 </li>
+<li>在select标签中使用resultMap</li>
 </ul>
-</li>
-<li>bean的使用<ul>
-<li>xml文件配置bean标签<ul>
-<li>class指定数据类型，id指定bean的id</li>
-<li>bean标签中设置autowire表示自动装配依赖信息，使用子标签property使用的是setter注入，子标签constructor-arg使用的是构造器注入</li>
-<li>获取容器对象ClassPathXmlApplicationContext，如果是使用的注解注入则需要获取AnnotationApplicationContext对象</li>
-<li>容器对象调用getBean获取bean对象使用</li>
-</ul>
-</li>
-<li>java类配置bean<ul>
-<li>在java配置类加上@Configuration注解将这个类交给容器管理且声明这是一个注解类</li>
-<li>在类中创建方法返回值一个对象，在方法上加@Bean注解</li>
-<li>在需要注入bean对象的属性上加上@Autowired注解</li>
-<li>获取容器对象AnnotationApplicationContext调用getBean方法</li>
-</ul>
-</li>
+<h2 id="分布查询"><a href="#分布查询" class="headerlink" title="分布查询"></a>分布查询</h2><ul>
+<li>在resultMap中，定义本表中的属性</li>
+<li>新建一个resultMap标签继承上一个resultMap，创建一个子标签指明剩余属性的类型和名字，在子标签中加入select属性指明改属性要使用那个方法查询，最后使用column属性指定将查到的那个数据诅哦为参数传递过去</li>
+<li>在select标签中使用定义好的resultMap标签即可完成分布查询</li>
+<li>按需加载<ul>
+<li>在局部的resultMap中的对应属性中配置fetchType为false</li>
+<li>或者全局设置属性lazyLoadingEnable为false</li>
+<li>涉资懒加载后只有在需要用到分步查询的属性时才会去执行查询</li>
 </ul>
 </li>
 </ul>
-<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><p>AOP面向切面编程，在不改变原来代码的情况下给程序统一进行增强，SpringAOP就相当于统一的给容器中的bean的方法做增强而且不会与原来方法中的代码耦合</p>
-<ul>
-<li>连接点joinPoint 程序中可以被增强的点，Spring中只支持方法类型的连接点，所以在Spring中连接点就是可以被增强的方法</li>
-<li>切入点pointCut 真正被增强了的连接点就是切入点</li>
-<li>通知advice 增强的具体代码可以设置在切入点之前或者之后或者环绕通知<ul>
-<li>@Before 在方法执行前进行增强</li>
-<li>@AfterReturning 在方法返回执行结果后进行增强，如果方法出现异常则不会进行增强</li>
-<li>@After 在方法执行后增强，不管有没有出现异常都会进行增强</li>
-<li>@AfterThrowing 在方法出现异常后进行增强</li>
-<li>@Around 环绕整个方法进行增强，需要手动设置通知的ProceedingJoinPoint属性，并且根据ProceedingJoinPoint来设置方法增强的时机</li>
+<h2 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h2><ul>
+<li>引入pagehelper依赖</li>
+<li>全局指定pagehelper</li>
+<li>在执行dao方法前设置分页参数和分页查询参数</li>
+<li>查到数据时会在sql语句上拼接limit</li>
+<li>在使用pagehelper时如果是多表查询，会破坏查询结果集的完整性，因为pagehelper是在sql语句的末尾加上的limit，这回导致在其他表查到的数据也会被分页限制，但如果使用分步查询则不会出现这个问题，因为分步查询本质上是两次查询，查询关联表的结果集是不会被分页限制的</li>
+</ul>
+<h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><ul>
+<li>一级缓存<ul>
+<li>一级缓存默认开启</li>
+<li>属于sqlSession级别，必须是相同的session对象才可以使用缓存中的数据</li>
+<li>当执行了一个查询语句后会将当前结果集存入当前session的一个map集合中</li>
+<li>如果下一次执行的查询语句跟上一次相同则直接使用session的map中的数据不相同则会将当前Sql语句查询到的数据存入session的map中的</li>
+<li>如果执行了一次增删改操作则会清空缓存中的数据</li>
 </ul>
 </li>
-<li>目标对象target 被增强的对象就成为目标对象</li>
-<li>切面aspect 切入点和通知的结合也就是切面类</li>
-<li>代理proxy 当一个bean被aop增强后返回的不在是原来的对象而是进行了加强后的代理对象</li>
-</ul>
-<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
-<li>静态代理<ul>
-<li>将代理类的代码编写并编译成字节码，在程序运行时调用，或者说就是手动创建代理对象去增强被代理对象的功能，这种方式实现简单但是代码冗余量大。</li>
+<li>二级缓存<ul>
+<li>需要加入cache标签开启</li>
+<li>属于mapper级别，会因为不同session对象的使用造成数据安全问题</li>
 </ul>
 </li>
-<li>动态代理<ul>
-<li>不需要编写代理类，而是在程序运行过程中根据需要代理的对象创建代理对象，相比于静态代理这种方式只需要写增强代码，方便管理且易于维护。</li>
-<li>JDK动态代理<ul>
-<li>需要被代理的类实现接口，否则不能使用JDK动态代理。</li>
-<li>JDK动态代理的代理对象也是实现被代理对象实现的接口，和被代理对象是同等级的关系。</li>
-</ul>
-</li>
-<li>Cglib动态代理<ul>
-<li>不需要被代理的类实现接口，Cglib动态代理的代理对象是被代理对象的子类。</li>
-<li>默认情况下只有不能使用JDK动态代理时才会使用Cglib动态代理，将AOP标签中的 proxy-target-class设置为true则开启Cglib。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="声明式事务"><a href="#声明式事务" class="headerlink" title="声明式事务"></a>声明式事务</h2><p>Spring中的事务可以用@Transactional注解声明，根据需求添加在类或方法上</p>
-<ul>
-<li>事务传播机制<ul>
-<li>在一个方法上加上@Transactional注解开启事务，该方法下的两个方法也开启事务，这时就会出现一个问题，尽管第一个方法正常执行，只要第二个方法出现了错误，第一个方法也会跟着回滚</li>
-<li>对于上诉关于事务的案例，Spring的事务提出了事务的传播机制来管理内外层事务的范围<ul>
-<li>REQUIRED 外层有事务内层就加入外层事务，外层没有事务内层就新建事务</li>
-<li>REQUIRES_NEW 外层有事务内层新建事务，外层没有事务内层也新建事务</li>
-<li>SUPPORTS 外层有事务内层就加入，外层没有事务则内层也没有</li>
-<li>NOT_SUPPORTED 无论外层有没有事务内层都没有事务</li>
-<li>MANDATORY 外层有事务则内层加入，外层没有事务则内层报错</li>
-<li>NEVER 外层没有事务内层也就没有事务，外层有事务内层就报错</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>事务隔离级别<ul>
-<li>DEFAULT 默认数据库隔离级别</li>
-<li>READ_COMMITTED 读已提交</li>
-<li>READ_UNCOMMITTED 读未提交</li>
-<li>REPEATABLE_READ 可重复度</li>
-<li>SERIALIZABLE 避免不可重复读、脏读、幻读，但是并发低</li>
-</ul>
-</li>
-<li>Readonly 设置事务为只读，可以提高事务效率</li>
 </ul>
 
                 
@@ -438,8 +396,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Spring</div>
-      <div>http://example.com/2022/08/23/spring/</div>
+      <div>MySQL</div>
+      <div>http://example.com/2022/10/22/myBatis/</div>
     </div>
     <div class="license-meta">
       
@@ -451,7 +409,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月23日</div>
+          <div>2022年10月22日</div>
         </div>
       
       
@@ -483,9 +441,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/20/springCloud/" title="SpringCloud">
+                      <a href="/2022/10/25/RabbitMQ/" title="RabbitMQ">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringCloud</span>
+                        <span class="hidden-mobile">RabbitMQ</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -493,8 +451,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/07/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="多线程">
-                        <span class="hidden-mobile">多线程</span>
+                      <a href="/2022/10/16/swagger/" title="Swagger">
+                        <span class="hidden-mobile">Swagger</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

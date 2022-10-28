@@ -16,15 +16,15 @@
   <meta name="author" content="cck1718">
   <meta name="keywords" content="">
   
-    <meta name="description" content="MySQLmysql属于典型的关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。">
+    <meta name="description" content="MySQLmysql属于关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。 数据库操作语句数据定义语言DDL 创建表 CREATE TABLE table_name  创建视图 CREATE VIEW view_name AS SELECT ···  创建索引 CREATE INDEX index_name ON table_name(column_name)  创建唯一索引 CREA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL">
 <meta property="og:url" content="http://example.com/2022/09/25/mysql/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="MySQLmysql属于典型的关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。">
+<meta property="og:description" content="MySQLmysql属于关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。 数据库操作语句数据定义语言DDL 创建表 CREATE TABLE table_name  创建视图 CREATE VIEW view_name AS SELECT ···  创建索引 CREATE INDEX index_name ON table_name(column_name)  创建唯一索引 CREA">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-25T09:03:43.254Z">
-<meta property="article:modified_time" content="2022-10-16T11:48:13.791Z">
+<meta property="article:modified_time" content="2022-10-21T14:04:40.265Z">
 <meta property="article:author" content="cck1718">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary_large_image">
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          46 字
+          1.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -273,8 +273,34 @@
             
               <div class="markdown-body">
                 
-                <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>mysql属于典型的关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。</p>
-
+                <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>mysql属于关系型数据库，数据库中数据用关系表示。一个关系对应一张数据表。</p>
+<h1 id="数据库操作语句"><a href="#数据库操作语句" class="headerlink" title="数据库操作语句"></a>数据库操作语句</h1><h2 id="数据定义语言DDL"><a href="#数据定义语言DDL" class="headerlink" title="数据定义语言DDL"></a>数据定义语言DDL</h2><ul>
+<li>创建表 CREATE TABLE table_name </li>
+<li>创建视图 CREATE VIEW view_name AS SELECT ··· </li>
+<li>创建索引 CREATE INDEX index_name ON table_name(column_name) </li>
+<li>创建唯一索引 CREATE UNIQUE INDEX index_name ON table_name(column_name) </li>
+<li>创建聚簇索引 CREATE CLUSTERED INDEX index_name ON table_name(column_name) </li>
+<li>删除 DROP table_name&#x2F;index_name&#x2F;view_name</li>
+<li>修改表 ALTER TABLE table_name ADD column e</li>
+</ul>
+<h2 id="数据操纵语言DML"><a href="#数据操纵语言DML" class="headerlink" title="数据操纵语言DML"></a>数据操纵语言DML</h2><ul>
+<li>插入语句 INSERT INTO table_name(column1,column2,···) VALUES (e1,e2,···) </li>
+<li>删除语句 删除表 DELETE FROM table_name &#x2F; 删除数据 DELETE FROM table_name WHERE ···</li>
+<li>修改语句 UPDATE SET table_name WHERE ···</li>
+</ul>
+<h2 id="数据查询语言DQL"><a href="#数据查询语言DQL" class="headerlink" title="数据查询语言DQL"></a>数据查询语言DQL</h2><ul>
+<li>查询语句<ul>
+<li>单表查询<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">SELECT</span> *<br><span class="hljs-keyword">FROM</span> <span class="hljs-built_in">table_name</span> [<span class="hljs-keyword">AS</span>] <br><span class="hljs-keyword">WHERE</span> ···<br><br>  <span class="hljs-keyword">DISTINCT</span>]：去重<br>  <br></code></pre></td></tr></table></figure></li>
+<li>多表连接<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">SELECT</span> ···<br><span class="hljs-keyword">FROM</span> table1 t1 ,table2 t1<br><span class="hljs-keyword">WHERE</span> t1.column=t2.<span class="hljs-keyword">column</span><br>···<br><br><br>···<br><span class="hljs-keyword">SELECT</span> ···<br><span class="hljs-keyword">FROM</span> table1 t1 (<span class="hljs-keyword">INNER</span>/LEFT/RIGHT) <span class="hljs-keyword">JOIN</span> table2 t2 <span class="hljs-keyword">ON</span> t1.column=t2.<span class="hljs-keyword">column</span><br><span class="hljs-keyword">WHERE</span> ···<br></code></pre></td></tr></table></figure>
+-WHERE<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">LIKE</span>:<br>   <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> name <span class="hljs-keyword">LIKE</span> _占位符占<span class="hljs-number">1</span>个<span class="hljs-operator">/</span><span class="hljs-operator">%</span>占位符占n个且不支持聚簇索引<br><span class="hljs-keyword">OR</span>：<br>   两个条件之间一个<br><span class="hljs-keyword">AND</span>：<br>   两个条件都 优先级大于<span class="hljs-keyword">OR</span><br><span class="hljs-keyword">IN</span>:<br>   查询结果有具体的一个或多个<br>   <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">column</span> <span class="hljs-keyword">IN</span> (n1[,n2,···])<br><span class="hljs-keyword">NULL</span>和<span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>:<br>   过滤条件为空或者不为空<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>:<br>   <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">column</span> <span class="hljs-keyword">ASC</span><span class="hljs-operator">/</span><span class="hljs-keyword">DESC</span>  升序<span class="hljs-operator">/</span>降序<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>:<br>   <span class="hljs-operator">/</span><span class="hljs-operator">/</span>先过滤条件再分组<br>   <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <br>   <span class="hljs-keyword">FROM</span> table_name <br>   <span class="hljs-keyword">WHERE</span> ···<br>   <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">column</span><br>   <span class="hljs-operator">/</span><span class="hljs-operator">/</span>先分组再过滤条件<br>   <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br>   <span class="hljs-keyword">FROM</span> table_name<br>   <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">column</span> <span class="hljs-keyword">HAVING</span> ···<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="数据控制语言DCL"><a href="#数据控制语言DCL" class="headerlink" title="数据控制语言DCL"></a>数据控制语言DCL</h2><ul>
+<li>授权给用户 GRANT ALL&#x2F;privileges on database.table&#x2F;database.* TO user@ipAddress</li>
+<li>收回用户权限 REVOKE ALL&#x2F;privileges on database.table&#x2F;database.* FROM user@ipAddress</li>
+</ul>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><h2 id="唯一索引"><a href="#唯一索引" class="headerlink" title="唯一索引"></a>唯一索引</h2><h2 id="非空索引"><a href="#非空索引" class="headerlink" title="非空索引"></a>非空索引</h2><h2 id="聚簇索引"><a href="#聚簇索引" class="headerlink" title="聚簇索引"></a>聚簇索引</h2><h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h1 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h1>
                 
               </div>
             
